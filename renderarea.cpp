@@ -90,10 +90,6 @@ void RenderArea::paintEvent(QPaintEvent * /* event */)
         QPoint(0, 0)
     };
 
-    int rectWidth = 80;
-    int rectHeight = 80;
-    QRect rect(0, 0, rectWidth, rectHeight);
-
     QPainterPath path;
     path.moveTo(20, 80);
     path.lineTo(20, 30);
@@ -114,79 +110,15 @@ void RenderArea::paintEvent(QPaintEvent * /* event */)
         painter.setRenderHint(QPainter::Antialiasing, true);
     //! [9]
 
-    //! [10]
-//    for (int x = 0; x < width(); x += 200) {
-//        for (int y = 0; y < height(); y += 200) {
-    painter.save();
-    painter.translate((width()-rectWidth)/2, (height()-rectHeight)/2);
-    //! [10] //! [11]
-    if (transformed) {
-        painter.translate(50, 50);
-        painter.rotate(60.0);
-        painter.scale(0.6, 0.9);
-        painter.translate(-50, -50);
-    }
-    //! [11]
+    std::shared_ptr<CelestialBody> sun = std::make_shared<CelestialBody>(width()/2, height()/2);
+    std::shared_ptr<CelestialBody> earth = std::make_shared<CelestialBody>(width()/2 - 100, height()/2, 5, 100);
 
-    //! [12]
-//    switch (shape) {
-//    case Line:
-//        painter.drawLine(rect.bottomLeft(), rect.topRight());
-//        break;
-//    case Points:
-//        painter.drawPoints(points, 4);
-//        break;
-//    case Polyline:
-//        painter.drawPolyline(points, 4);
-//        break;
-//    case Polygon:
-//        painter.drawPolygon(points, 4);
-//        break;
-//    case Rect:
-//        painter.drawRect(rect);
-//        break;
-//    case RoundedRect:
-//        painter.drawRoundedRect(rect, 25, 25, Qt::RelativeSize);
-//        break;
-//    case Ellipse:
-//        painter.drawEllipse(rect);
-//        break;
-//    case Arc:
-//        painter.drawArc(rect, startAngle, arcLength);
-//        break;
-//    case Chord:
-//        painter.drawChord(rect, startAngle, arcLength);
-//        break;
-//    case Pie:
-//        painter.drawPie(rect, startAngle, arcLength);
-//        break;
-//    case Path:
-//        painter.drawPath(path);
-//        break;
-//    case Text:
-//        painter.drawText(rect,
-//                         Qt::AlignCenter,
-//                         tr("Qt by\nThe Qt Company"));
-//        break;
-//    case Pixmap:
-//        painter.drawPixmap(10, 10, pixmap);
-//    }
+    sun->addSatellite(std::shared_ptr<CelestialBody>(earth));
 
-    //! [12] //! [13]
-    painter.restore();
-
-    CelestialBody sun = CelestialBody(width()/2, height()/2);
-    CelestialBody earth = CelestialBody(width()/2 - 100, height()/2, 5, 100);
-
-    sun.draw(painter);
-    earth.draw(painter);
-
-//        }
-//    }
+    sun->draw(painter);
 
     painter.setRenderHint(QPainter::Antialiasing, false);
     painter.setPen(palette().dark().color());
     painter.setBrush(Qt::NoBrush);
     painter.drawRect(QRect(0, 0, width() - 1, height() - 1));
 }
-//! [13]
