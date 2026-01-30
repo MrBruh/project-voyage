@@ -21,10 +21,8 @@ Situation unknown. All that the player knows is what is available on their senso
 ### Factions/Powers
 
 | Faction Name | Description | Relationship to Player |
-|--------------|-------------|------------------------|
-| Directors    | INFO LOST   | Gives the player the initial directives to follow |
-|              |             |                        |
-|              |             |                        |
+| ------------ | ----------- | ---------------------- |
+| Directors | INFO LOST | Gives the player the initial directives to follow |
 
 ---
 
