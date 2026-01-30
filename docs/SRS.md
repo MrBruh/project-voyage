@@ -102,7 +102,7 @@ The game ends when the player's consciousness is taken offline through power los
 
 | ID | Requirement |
 | -- | ----------- |
-| USA-001 |  |
+| USA-001 | |
 
 ### 3.3 Performance Requirements
 
