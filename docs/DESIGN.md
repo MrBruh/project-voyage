@@ -13,7 +13,7 @@ A turn-based resource management game with simulation depth comparable to Aurora
 ## Technology Stack
 
 | Component | Choice | Rationale |
-|-----------|--------|-----------|
+| --------- | ------ | --------- |
 | Language | C++ | Performance, control over memory, suitable for complex simulations |
 | Graphics | SDL2 | Maximum control over rendering, mature library, good for custom UI systems |
 | Text | SDL_ttf | Integrates with SDL2, supports various font styles and sizes |
@@ -21,6 +21,7 @@ A turn-based resource management game with simulation depth comparable to Aurora
 ## UI Design Principles
 
 ### Visual Style
+
 - Terminal/retro aesthetic as a *style choice*, not a technical constraint
 - Matrix-inspired color schemes (greens, ambers, cyans on dark backgrounds)
 - Box-drawing and line elements for panel borders
@@ -28,6 +29,7 @@ A turn-based resource management game with simulation depth comparable to Aurora
 - Proportional fonts permitted where readability benefits
 
 ### Window System
+
 - Resizable panels/windows
 - UI elements scale appropriately with window size
 - Not locked to character grid - pixel-level positioning allowed
