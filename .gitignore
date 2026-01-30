@@ -1,2 +1,18 @@
 # Local Claude preferences
 CLAUDE.local.md
+
+# Build directories
+build/
+out/
+cmake-build-*/
+
+# IDE
+.vs/
+.vscode/
+*.user
+
+# Compiled
+*.exe
+*.dll
+*.obj
+*.o
