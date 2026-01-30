@@ -42,11 +42,11 @@ core/           Shared utilities, data structures
 ## Build Commands
 
 ```bash
-cmake -B build -S .
-cmake --build build
+cmake -B build -S . -DCMAKE_TOOLCHAIN_FILE="C:/Users/mdnss/Dev/vcpkg/scripts/buildsystems/vcpkg.cmake"
+cmake --build build --config Release
 ```
 
-Executable outputs to `build/bin/`.
+Executable outputs to `build/bin/Release/`.
 
 ## Development Approach
 

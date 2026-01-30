@@ -1,5 +1,6 @@
 # Local Claude preferences
 CLAUDE.local.md
+.claude/
 
 # Build directories
 build/
