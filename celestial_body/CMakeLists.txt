@@ -1,9 +1,0 @@
-target_sources(Voyage-widget
-    PRIVATE
-        celestialbody.cpp
-        celestialbody.h
-        celestialbodyorbit.cpp
-        celestialbodyorbit.h
-        celestialpoint.cpp
-        celestialpoint.h
-)
