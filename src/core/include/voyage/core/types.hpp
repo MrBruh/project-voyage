@@ -1,5 +1,5 @@
 #pragma once
-#include <cstdint>
+import <cstdint>;
 
 namespace voyage::core {
 

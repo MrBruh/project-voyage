@@ -1,8 +1,8 @@
 #pragma once
 #include <voyage/core/types.hpp>
-#include <functional>
-#include <vector>
-#include <atomic>
+import <functional>;
+import <vector>;
+import <atomic>;
 
 namespace voyage::sim {
 

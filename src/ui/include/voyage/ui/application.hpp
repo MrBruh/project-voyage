@@ -2,8 +2,8 @@
 #include <voyage/ui/renderer.hpp>
 #include <voyage/ui/panel/system_view.hpp>
 #include <voyage/simulation/simulation.hpp>
-#include <memory>
-#include <string>
+import <memory>;
+import <string>;
 
 struct SDL_Window;
 

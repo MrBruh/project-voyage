@@ -1,7 +1,7 @@
 #pragma once
 #include <voyage/core/types.hpp>
-#include <unordered_set>
-#include <vector>
+import <unordered_set>;
+import <vector>;
 
 namespace voyage::sim::ecs {
 

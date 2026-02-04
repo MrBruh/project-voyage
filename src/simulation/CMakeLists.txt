@@ -9,3 +9,8 @@ target_include_directories(voyage_simulation PUBLIC
 )
 
 target_link_libraries(voyage_simulation PUBLIC voyage_core)
+
+set_target_properties(voyage_simulation PROPERTIES
+    CXX_STANDARD 23
+    CXX_STANDARD_REQUIRED ON
+)

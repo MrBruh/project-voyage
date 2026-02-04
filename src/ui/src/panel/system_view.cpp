@@ -2,7 +2,7 @@
 #include <voyage/ui/renderer.hpp>
 #include <voyage/ui/drawing/primitives.hpp>
 #include <voyage/simulation/simulation.hpp>
-#include <cmath>
+import <cmath>;
 
 namespace voyage::ui::panel {
 

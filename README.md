@@ -5,8 +5,8 @@ A turn-based resource management game with deep simulation mechanics and a termi
 ## Building
 
 Requires:
-- CMake 3.16+
-- C++17 compiler
+- CMake 3.28+
+- C++23 compiler (MSVC with /std:c++23 or GCC with -std=c++23)
 - vcpkg with SDL2 installed
 
 ```bash

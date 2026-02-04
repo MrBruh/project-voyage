@@ -1,7 +1,7 @@
 #pragma once
 #include <voyage/simulation/ecs/world.hpp>
 #include <voyage/simulation/time_system.hpp>
-#include <memory>
+import <memory>;
 
 namespace voyage::sim {
 

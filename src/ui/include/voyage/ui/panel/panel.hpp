@@ -1,5 +1,5 @@
 #pragma once
-#include <string>
+import <string>;
 
 namespace voyage::ui {
 class Renderer;

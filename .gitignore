@@ -1,6 +1,7 @@
-# Local Claude preferences
+# Local Agent preferences
 CLAUDE.local.md
 .claude/
+.opencode/
 
 # Build directories
 build/

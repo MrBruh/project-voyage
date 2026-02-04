@@ -106,3 +106,33 @@ cmake --build build --config Release
 ```
 
 Executable outputs to `build/bin/Release/project-voyage.exe`.
+
+## C++23 Header Units
+
+The codebase uses C++23 header units for standard library imports. This provides faster compilation times and better isolation.
+
+**Import Pattern:**
+```cpp
+import <cstdint>;     // Explicit import
+import <vector>;
+import <string>;
+#include "my_header.hpp"  // Project headers still use #include
+```
+
+**Standard Library Headers Converted:**
+- `<cstdint>` - types.hpp, renderer.hpp
+- `<cmath>` - math.hpp, system_view.cpp
+- `<unordered_set>` - entity.hpp
+- `<unordered_map>` - component.hpp
+- `<vector>` - entity.hpp, world.hpp, time_system.hpp
+- `<memory>` - world.hpp, simulation.hpp, application.hpp
+- `<string>` - application.hpp, panel.hpp
+- `<functional>` - time_system.hpp
+- `<atomic>` - time_system.hpp
+- `<typeindex>` - component.hpp
+- `<typeinfo>` - component.hpp
+- `<any>` - component.hpp
+
+**SDL2 Headers:** Must remain as `#include` since SDL headers cannot be imported as modules yet.
+
+**Project Headers:** Remain as `#include` directives for compatibility and to allow forward declarations.

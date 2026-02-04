@@ -2,8 +2,8 @@
 #include <voyage/simulation/ecs/entity.hpp>
 #include <voyage/simulation/ecs/component.hpp>
 #include <voyage/simulation/ecs/system.hpp>
-#include <memory>
-#include <vector>
+import <memory>;
+import <vector>;
 
 namespace voyage::sim::ecs {
 

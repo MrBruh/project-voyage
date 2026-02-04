@@ -1,5 +1,5 @@
 #pragma once
-#include <cstdint>
+import <cstdint>;
 
 struct SDL_Renderer;
 struct SDL_Window;

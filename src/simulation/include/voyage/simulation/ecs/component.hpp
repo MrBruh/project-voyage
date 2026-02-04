@@ -1,8 +1,9 @@
 #pragma once
 #include <voyage/core/types.hpp>
-#include <typeindex>
-#include <any>
-#include <unordered_map>
+import <typeindex>;
+import <typeinfo>;
+import <any>;
+import <unordered_map>;
 
 namespace voyage::sim::ecs {
 

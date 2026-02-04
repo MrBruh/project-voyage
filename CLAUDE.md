@@ -8,10 +8,11 @@ Project Voyage is a turn-based resource management game with Aurora 4x-level sim
 
 ## Technology Stack
 
-- **Language**: C++ (C++17 or later)
+- **Language**: C++23
 - **Graphics**: SDL2
 - **Text Rendering**: SDL_ttf
-- **Build System**: CMake
+- **Build System**: CMake 3.28+
+- **C++ Modules**: Standard library headers use `import` statements (header units)
 
 ## Architecture
 
@@ -45,6 +46,8 @@ core/           Shared utilities, data structures
 cmake -B build -S . -DCMAKE_TOOLCHAIN_FILE="C:/Users/mdnss/Dev/vcpkg/scripts/buildsystems/vcpkg.cmake"
 cmake --build build --config Release
 ```
+
+Note: Requires CMake 3.28+ and a C++23 compiler. MSVC users must use Visual Studio 2022 17.8+ with `/std:c++23`.
 
 Executable outputs to `build/bin/Release/`.
 

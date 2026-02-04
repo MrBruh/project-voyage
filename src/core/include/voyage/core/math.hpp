@@ -1,5 +1,5 @@
 #pragma once
-#include <cmath>
+import <cmath>;
 
 namespace voyage::core {
 
